@@ -1,0 +1,52 @@
+
+table, caption, th, td {
+    /*
+    Dentro de este selector de varias entiquetas, tenemos las propiedades y valores que le queremos dar a cada propiedad:
+    PROPIEDADES
+    nomber : valor;
+    */
+    border: 1px solid black;
+    /*
+    En en border vemos un shortcut, donde defino los valores de tres probiedades:
+    border-widith
+    border-style
+    border-color
+    no importa el orden de los valores, ya que css por los valores define a que hace referencia.
+    */
+
+    text-align: center; 
+    vertical-align: middle;  
+}
+/*
+Las reglas de estilos pueden entrar en conflico cuando se aplican por varios selectores, por eso el lenguaje cuando tiene que resolver este conflicto ve cual tiene mayor relevancia por medio de la "Selector Specificy" o especifidad del selector, las reglas de estilo con mayor especificada es la que termina aplicando, y en el caso que tengan la misma especificidad, aplica la última reglas aplicadas que encuentra en el archivo .css de forma secuencial.
+
+En el ejemplo actual las primeras reglas de estilo del selector por id tienen mayor especificidad por lo tanto se aplican esas antes que la definida por etiquetas:
+Especificidad
+por etiqueta:   0,0,1
+por clase:      0,1,0
+por id:  1,0,0
+
+Siempre las reglas por etiquetas tendrán mayor especificidad, sin embargo la especificidad se suma y una regla que afecte a una clase y una etiqueta parará a ser más especifica.s
+*/
+
+table{
+    border-collapse: collapse;
+}
+
+#tabla-materias {
+    border-color: blue;
+}
+
+.mi-tabla{
+    border-color: green;
+}
+
+td{
+    padding: 5px 10px;
+}
+/*
+Con este selector le estoy diciendo que aplique las reglas de estilo a imagenen anidadas dentro de un anchor.
+*/
+a > img {
+    height: 20px;
+}

@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Página de la tercer clase de Laboratorio III de la UTN. Dictada por el Profesor Christian Baus.">
+        <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-con">
+        <link rel="stylesheet" href="./css/estilos.css">
+        <title>Clase 03 - Laboratorio III</title>
+      </head>
+<body>
+     <h1 id="top">Clase 03 - 11/04/2023</h1>
+     <ul>
+        <li>
+            <a href="#tabla"> Tema  1 - Tablas en Html.</a>
+        </li>
+        <li>
+            <a href="#selectoresCSS">Tema 2 - Selectores CSS.</a>
+        </li>
+        <li>
+          <a href="#boxModel">Tema 3 - Box Model.</a>
+      </li>
+      <li>
+        <a href="./Ejercicios.html" title="Ejercicio de tablas.">Ver los ejercicios de tablas.</a>
+      </li>
+     </ul>
+     <h2 id="tablas">Tema  1 - Tablas en Html</h2>
+     <p>
+        En HTML, una tabla es un elemento que permite mostrar datos de manera estructurada en filas y columnas. Las tablas como sabemos tienen filas y columnas, pero en html no hay columnas; por eso las tablas en html estan formadas por filas y dentros de las filas se posicionan celdas, como las celdas se alinean con las celdas de las filas superiores e inforiores dentro del elemento table, esta composición hace que se simule una tabla, sin que exista el elemento o etiqueta columna.
+        <br><br>
+        Como dijimos anteriormenete las tablas se compone de varios elementos (etiquetsa semánticas html) que tienen un significado para los motores de busqueda que amplifica el significado de nuestra estructura html, entre los que se encuentran:
+        <ol>
+            <li>
+                El elemento &lt;table&gt;: Es el elemento principal de la tabla y se utiliza para crear la estructura básica de la misma. Todos los elementos de la tabla deben estar contenidos dentro de este elemento.
+            </li>
+            <li>
+                El elemento &lt;thead> es uno de los elementos de tabla HTML que se utiliza para definir el encabezado de una tabla. Este elemento se utiliza para agrupar las filas que contienen las cabeceras de la tabla, lo que facilita la definición de estilos CSS para este encabezado.
+                <br>
+                En términos técnicos, el elemento &lt;thead> es un contenedor que agrupa las filas que contienen las cabeceras de una tabla, y se ubica dentro del elemento &lt;table>. En el elemento &lt;thead> se pueden utilizar los elementos &lt;tr>, &lt;th> o &lt;td> para crear las filas y las celdas de la cabecera de la tabla.
+                <br>
+                Al utilizar el elemento &lt;thead>, se pueden aplicar estilos CSS específicos a la cabecera de la tabla, lo que permite personalizar el diseño y la presentación de la tabla. Por ejemplo, se puede definir un estilo de fondo, color, borde, tamaño de letra, entre otros estilos, que se aplicarán solamente a la cabecera de la tabla.
+                <br>
+                Además, al utilizar el elemento &lt;thead>, se facilita la identificación y el acceso a la información de la tabla por parte de los usuarios, especialmente por aquellos que utilizan tecnologías de asistencia o lectores de pantalla. Al agrupar las cabeceras de la tabla en un elemento específico, se permite que estos usuarios identifiquen y comprendan más fácilmente la estructura de la tabla y la relación entre sus filas y columnas.
+                <br>
+                En resumen, el elemento &lt;thead> es un elemento importante de las tablas HTML que permite definir y personalizar la cabecera de la tabla, y mejorar la accesibilidad y la usabilidad del sitio web para los usuarios con discapacidad visual o cognitiva.
+            </li>
+            <li>
+                El elemento &lt;tbody> es otro de los elementos de tabla HTML que se utiliza para agrupar un conjunto de filas de una tabla y separarlas del encabezado y pie de la tabla. Este elemento se utiliza para contener el cuerpo de la tabla, es decir, las filas que contienen la información específica de la tabla.
+                <br>
+                En términos técnicos, el elemento &lt;tbody> es un contenedor que agrupa las filas que contienen la información específica de una tabla, y se ubica dentro del elemento &lt;table>. En el elemento &lt;tbody> se pueden utilizar los elementos &lt;tr>, &lt;th> o &lt;td> para crear las filas y las celdas del cuerpo de la tabla.
+                <br>
+                El uso del elemento &lt;tbody> no es obligatorio en las tablas HTML, pero se recomienda su uso por razones de organización y claridad del código HTML. Además, al utilizar este elemento, se pueden aplicar estilos CSS específicos al cuerpo de la tabla, lo que permite personalizar el diseño y la presentación de la tabla.
+                <br>  
+                También es importante mencionar que al utilizar el elemento &lt;tbody>, se mejora la accesibilidad y la usabilidad del sitio web para los usuarios con discapacidad visual o cognitiva. Al separar la cabecera y el pie de la tabla del cuerpo, se permite que los usuarios identifiquen y comprendan más fácilmente la estructura de la tabla y la relación entre sus filas y columnas.
+                <br>   
+                En resumen, el elemento &lt;tbody> es un elemento importante de las tablas HTML que permite agrupar y separar el cuerpo de la tabla del encabezado y pie, lo que facilita la organización y claridad del código HTML, permite la personalización del diseño de la tabla y mejora la accesibilidad y la usabilidad del sitio web para los usuarios con discapacidad visual o cognitiva.
+            </li>
+            <li>
+                El elemento &lt;tfoot> es otro de los elementos de tabla HTML que se utiliza para definir el pie de una tabla, es decir, las filas que contienen información adicional y resúmenes de los datos de la tabla. Este elemento se utiliza para agrupar las filas que contienen la información del pie de la tabla.
+                <br>   
+                En términos técnicos, el elemento &lt;tfoot> es un contenedor que agrupa las filas que contienen la información del pie de una tabla, y se ubica dentro del elemento &lt;table>. En el elemento &lt;tfoot> se pueden utilizar los elementos&lt;tr>, &lt;th> o &lt;td> para crear las filas y las celdas del pie de la tabla.
+                <br>   
+                Al utilizar el elemento &lt;tfoot>, se pueden aplicar estilos CSS específicos al pie de la tabla, lo que permite personalizar el diseño y la presentación de la tabla. Además, el uso del elemento &lt;tfoot> mejora la accesibilidad y la usabilidad del sitio web para los usuarios con discapacidad visual o cognitiva, ya que separa y agrupa la información adicional y los resúmenes de los datos de la tabla.
+                <br>   
+                Es importante mencionar que el uso del elemento &lt;tfoot> no es obligatorio en las tablas HTML, pero se recomienda su uso cuando se desea agregar información adicional o resúmenes de los datos de la tabla en el pie de la misma.
+                <br>   
+                En resumen, el elemento &lt;tfoot> es un elemento importante de las tablas HTML que permite definir y personalizar el pie de la tabla, agrupar y separar la información adicional y los resúmenes de los datos de la tabla, mejorar la accesibilidad y la usabilidad del sitio web para los usuarios con discapacidad visual o cognitiva y personalizar el diseño y la presentación de la tabla.
+            </li>
+            <li>
+                El elemento &lt;tr&gt; (table row): Este elemento se utiliza para definir una fila en la tabla. Todos los elementos de una fila deben estar contenidos dentro de este elemento.
+            </li>
+            <li>
+                El elemento &lt;td&gt; (table data): Este elemento se utiliza para definir una celda en la tabla. Todos los elementos de una celda deben estar contenidos dentro de este elemento.
+            </li>
+            <li>
+                El elemento &lt;th&gt; (table header): Este elemento se utiliza para definir una celda de encabezado en la tabla. Es similar al elemento &lt;td&gt;, pero se utiliza para resaltar una celda que contiene el encabezado de una columna o fila.
+            </li>
+            <li>
+                El elemento &lt;caption&gt;: Se utiliza para agregar un título a la tabla.
+            </li>
+        </ol>
+        Una tabla puede tener uno o más elementos &lt;thead&gt;, &lt;tbody&gt; y &lt;tfoot&gt;. Cada uno de estos elementos puede contener uno o más elementos &lt;tr&gt;. 
+        <br><br>
+        Ejemplo de código para una tabla:
+        <br><br>  
+        <table id="tabla-materias" class="clase-tabla">
+            <caption>Tabla de ejemplo:</caption>
+            <thead>
+              <tr>
+                <th>Lunes</th>
+                <th>Martes</th>
+                <th>Miercoles</th>
+                <th>Jueves</th>
+                <th>Viernes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Programación III</td>
+                <td>Laboratorio III</td>
+                <td>Arq. Sis. Op.</td>
+                <td>Matématicas</td>
+                <td>Matématicas</td>
+              </tr>
+              <tr>
+                <td>Programación III</td>
+                <td>Laboratorio III</td>
+                <td>Arq. Sis. Op.</td>
+                <td>Matématicas</td>
+                <td>Matématicas</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="5">Total de materias: 4</td>
+              </tr>
+            </tfoot>
+          </table>
+          <br><br>  
+        En este ejemplo, se crea una tabla con una sección de título (&lt;caption>), una sección de encabezado (&lt;thead>) con cinco columnas (&lt;th>), una sección de cuerpo (&lt;tbody>) con dos filas (&lt;tr>) y cinco columnas (&lt;td>) por fila, y una sección de pie (&lt;tfoot>) con una fila (&lt;tr>) y una columna con colspan = "5" (&lt;td>). La tabla muestra una lista de asignaturas con las días que se cursan, y el total de asignaturas al final. Los bordes y colores están definidos por medio de una hoja de estilos CCS.
+        <br><br>  
+        Es importante tener en cuenta que, aunque es posible crear tablas utilizando únicamente los elementos básicos mencionados anteriormente, también existen muchas otras características que se pueden agregar a una tabla en HTML para personalizar su apariencia y comportamiento. Algunas de estas características son:
+          <ol>
+            <li>
+              El atributo colspan: Se utiliza para indicar que una celda se extiende a través de varias columnas.
+            </li>
+            <li>
+              El atributo rowspan: Se utiliza para indicar que una celda se extiende a través de varias filas.
+            </li>
+            <li>
+              El atributo border: Se utiliza para especificar el ancho del borde de la tabla. (En el ejemplo anterior lo definimo por medio de CSS)
+            </li>
+            <li>
+              El atributo cellpadding: Se utiliza para especificar el espacio entre el borde de una celda y su contenido.
+            </li>
+            <li>
+              El atributo cellspacing: Se utiliza para especificar el espacio entre las celdas de la tabla.
+            </li>
+            <li>El atributo width: Se utiliza para especificar el ancho de la tabla o de sus columnas.</li>
+            <li>
+              El atributo height: Se utiliza para especificar la altura de la tabla o de sus filas.
+            </li>
+            <li>
+              El atributo bgcolor: Se utiliza para especificar el color de fondo de la tabla o de sus celdas.
+            </li>
+            <li>
+              El atributo align: Se utiliza para alinear la tabla en la página (izquierda, centro o derecha).
+            </li>
+            <li>
+              El atributo valign: Se utiliza para alinear el contenido de las celdas verticalmente (arriba, centro o abajo).
+            </li>
+          </ol>
+        Cabe reiterar que la mayoria de estos atributos los vamos a editar por medio de CSS y su hoja de estilos.
+        <br><br> 
+        Es importante mencionar que, aunque las tablas son una herramienta muy útil para presentar información de manera organizada, su uso excesivo puede dificultar la accesibilidad y la usabilidad del sitio web. Por lo tanto, se recomienda utilizar tablas solo cuando se necesita mostrar información tabular, y no para diseñar el aspecto visual del sitio web.
+        <br><br> 
+        Además, es importante asegurarse de que la tabla tenga una estructura clara y coherente, utilizando los elementos &lt;thead>, &lt;tbody> y &lt;tfoot> de manera apropiada. También se debe utilizar el atributo scope en los elementos &lt;th> para especificar si se trata de una cabecera de columna o de fila.
+        <br><br> 
+        En resumen, las tablas en HTML son una herramienta útil para presentar información de manera organizada y estructurada. Para crear una tabla, se utiliza el elemento &lt;table> junto con otros elementos como &lt;tr>, &lt;th> y &lt;td>. Además, se pueden utilizar diversos atributos para personalizar la apariencia y el comportamiento de la tabla. Sin embargo, es importante utilizar las tablas con moderación y asegurarse de que tengan una estructura clara y coherente para mejorar la accesibilidad y la usabilidad del sitio web.
+     </p>
+     <a href="#top">Volver arriba.</a>
+     <h2 id="selectoresCSS">Tema 2 - Selectores CSS</h2>
+     <p>
+        En CSS se puede definir estilo para más de una etiqueta de html, listandolas separadas por coma, todos esos elementos que figuren en nuestra estructura van a figurar con este estilo.
+
+        Los selectores en CSS son patrones que se utilizan para seleccionar y aplicar estilos a elementos específicos en una página HTML. Los selectores se combinan con propiedades CSS para dar estilo a los elementos.
+
+        <h3>Selectores de etiquetas</h3>
+        Los selectores de tipo se utilizan para seleccionar elementos HTML según su etiquetas. Por ejemplo, el selector p selecciona todos los elementos de párrafo en la página.
+        <br><br>  
+        El siguiente ejemplo es un selector de etiquetas, con varias etiquetas selecionadas.
+        <pre><code>
+            table, caption, th, td {
+                border: 1px solid black;
+                border-collapse: collapse;
+                text-align: center; 
+                vertical-align: middle;  
+            }
+        </code></pre>
+        En el ambito del selector se encuentran las propiedades y valores de estilo que definimos para esas etiquetas semanticas de html:
+        <pre><code>
+          etiqueta {
+            nombrePropiedad : valorProdiedad;  
+        }
+        </code></pre>
+        <h3>Selectores de ID</h3>
+        Los selectores de ID se utilizan para seleccionar elementos HTML según su identificador único. Para aplicar un selector de ID, se agrega un numeral (#) seguido del nombre del ID. Por ejemplo, el selector #mi-id selecciona el elemento que tiene el ID "mi-id".
+        <br><br>
+        Una página bien programada no debería tener IDs repetidos en las etiquetas, en el caso que se repita un ID el que prevalece es el primero que encuentra el interprete del navegador en forma secuencial de arriba hacia abajo. Por eso no tiene sentido repetir su id.
+        <br><br>
+        Los elementos seleccionados por ID, las reglas de estilo se le van aplicar a ese solo elemento. El marcado por IDs de las etiquetas esta en desuso en la programación web moderna por que  hoy al ser las páginas dinámicas y generar el html por medio del DOM estás pierden sentido. Por eso en las páginas modernas se resuelven los estilos por medio de selectores de estilo, de clase y por medio del arbol de relaciones jerarquicos con los elementos padres, hijos, nietos, etc.
+        <br><br>
+        Ejemplo de selector por Id:
+        <pre><code>
+          #miId {
+            border-color: blue;
+        }
+        </code></pre>
+        <h3>Selectores de clase</h3>
+        Los selectores de clase se utilizan para seleccionar elementos HTML según su clase. Para aplicar un selector de clase, se agrega un punto (.) seguido del nombre de la clase. Por ejemplo, el selector .mi-clase selecciona todos los elementos que tienen la clase "mi-clase".
+        <br><br>
+        Definir estilos de CSS por clase es util, ya que nos permite agrupar elemontas que no son del mismo tipo, son distintas etiquetas.
+        <br><br>
+        Sintaxis CSS:
+        <pre><code>
+          .mi-clase {
+            border-color: blue;
+        }
+        </code></pre>
+        <h3>Selectores descendientes</h3>
+        Los selectores descendientes se utilizan para seleccionar elementos HTML que son descendientes de otros elementos HTML. Por ejemplo, el selector ul li selecciona todos los elementos de la lista (li) que son descendientes de un elemento de lista (ul).
+
+        <h3>Selectores de atributo</h3>
+        Los selectores de atributo se utilizan para seleccionar elementos HTML según sus atributos. Por ejemplo, el selector [type="text"] selecciona todos los elementos de entrada que tienen un atributo "type" con el valor "text".
+     </p>
+     <a href="#top">Volver arriba.</a>
+     <h2 id="boxModel">Tema 3 - Box Model</h2>
+     <p>
+      El Box Model de HTML es una forma de representar la estructura de una caja rectangular en una página web. Cada elemento HTML es considerado como una caja rectangular que contiene cuatro regiones: el contenido, el padding, el borde y el margen.
+      <ul>
+        <li>
+          El contenido (content): es el área donde se muestra el contenido real de la caja, como texto, imágenes, etc.
+        </li>
+        <li>
+          El padding: es un espacio opcional que se puede agregar alrededor del contenido para separarlo del borde. Especifica la distancia entre el contenido y el borde.
+        </li>
+        <li>
+          El borde (border): es la línea que rodea el contenido y el padding de la caja. Puede ser sólido, punteado, con sombra, etc., y se especifica con una anchura y un estilo.
+        </li>
+        <li>
+          El margen (margin): es un espacio opcional que se puede agregar alrededor del borde para separar la caja de otros elementos. Especifica la distancia entre el borde y los elementos circundantes.
+        </li>
+      </ul>
+      <h3>
+        Etiquetas en Bloque y Inline del box model en HTML:
+      </h3>
+      En HTML, existen dos tipos principales de etiquetas: las etiquetas de bloque y las etiquetas inline.
+      <h4>
+        Las etiquetas de bloque.
+      </h4>
+      Las etiquetas de bloque son aquellas que crean un nuevo bloque de contenido que comienza en una nueva línea y ocupa todo el ancho disponible de su contenedor. Las etiquetas de bloque se utilizan generalmente para estructurar el contenido de una página web y para separar visualmente diferentes secciones de contenido.
+      <br><br>
+      Algunos ejemplos de etiquetas de bloque comunes incluyen:
+      <ul>
+        <li>&lt;div>: se utiliza para crear secciones de contenido independientes que se pueden estilizar con CSS.</li>
+        <li>&lt;p>: se utiliza para crear párrafos de texto.</li>
+        <li>&lt;h1>, &lt;h2>, &lt;h3>, etc.: se utilizan para crear encabezados de diferentes niveles.</li>
+        <li>&lt;ul> y &lt;ol>: se utilizan para crear listas sin orden y ordenadas, respectivamente.</li>
+        <li>&lt;table>: se utiliza para crear tablas de datos.</li>
+      </ul>
+      Las etiquetas de bloque también pueden contener otras etiquetas de bloque o etiquetas inline, y se pueden utilizar propiedades CSS para darles estilo y cambiar su apariencia.
+      <h4>
+        Las etiquetas de Inline.
+      </h4>
+      Las etiquetas inline son aquellas que se utilizan para envolver contenido que no necesita comenzar en una nueva línea, y que se ajusta al flujo del texto. A diferencia de las etiquetas de bloque, las etiquetas inline no crean saltos de línea y no ocupan todo el ancho disponible de su contenedor.
+      <br><br>
+      Algunos ejemplos de etiquetas inline comunes incluyen:
+      <ul>
+        <li>&lt;span>: se utiliza para aplicar estilos a un texto o grupo de texto específico.</li>
+        <li>&lt;a>: se utiliza para crear enlaces a otras páginas web o recursos.
+        </li>
+        <li>&lt;img>: se utiliza para insertar imágenes en la página web.
+        </li>
+        <li>&lt;input>: se utiliza para crear controles de entrada de datos, como campos de texto y botones.
+        </li>
+      </ul>
+      Las etiquetas inline también pueden contener otras etiquetas inline, pero no pueden contener etiquetas de bloque.
+      <br><br>
+      Es importante tener en cuenta que aunque las etiquetas inline no crean saltos de línea, pueden tener un ancho y un alto específicos, y se pueden utilizar propiedades CSS para darles estilo y cambiar su apariencia.
+      <h3>
+        Componentes del box model en CSS:
+      </h3>
+      <img src="./img/Box Model.png" alt="Representación gráfica del box model.">
+      <br>
+      El box model de CSS es un modelo que describe cómo se calculan las dimensiones y posiciones de los elementos en una página web. Este modelo se representa como una caja rectangular, con contenido, relleno, borde y margen. 
+      <h4>
+        Contenido
+      </h4>
+      El contenido se refiere al espacio dentro de la caja donde se encuentra el contenido real del elemento HTML. Por ejemplo, si el elemento es un párrafo, el contenido sería el texto del párrafo.
+
+      <h4>
+        Relleno (padding)
+      </h4>
+      El relleno es el espacio que se encuentra entre el contenido y el borde de la caja. El relleno se utiliza para separar el contenido del borde y dar un espacio adicional entre el contenido y el borde.
+      <br><br>
+      El padding se puede difinir individualmente padding-top, padding-bottom, padding-right, padding-left o con "shorthand", que es una forma de abreviar en una linea la declaración de relleno de todos los lados.
+      <pre>
+        <code>
+          etiquetaHtml {
+            padding:  5px;
+          }
+        </code>
+      </pre>
+      Define 5px de relleno a todos los lados.
+      <pre>
+        <code>
+          etiquetaHtml {
+            padding:  10px 5px;
+          }
+        </code>
+      </pre>
+      Define 10px arriba y abajo y 5px de relleno al lado derecho e izquierdo.
+      <pre>
+        <code>
+          etiquetaHtml {
+            padding:  10px 5px 15px;
+          }
+        </code>
+      </pre>
+      Define 10px arriba, 5px al lado derecho e izquierdo y 15px de relleno abajo.
+      <pre>
+        <code>
+          etiquetaHtml {
+            padding:  10px 5px 15px 3px;
+          }
+        </code>
+      </pre>
+      Define 10px arriba, 5px al lado derecho, 15px de relleno abajo y 3px abajo.
+      <h4>
+        Borde (border)
+      </h4>
+      El borde es la línea que rodea el contenido y el relleno de la caja. El borde puede ser de diferentes estilos, grosores y colores.
+      <h4>
+        Margen (margin)
+      </h4>
+      El margen es el espacio que se encuentra fuera de la caja, entre el borde y el elemento adyacente más cercano. El margen se utiliza para separar los elementos entre sí.
+
+      <h3>
+        Cálculo del tamaño total de la caja
+      </h3>
+      El tamaño total de la caja se calcula sumando el tamaño del contenido, el relleno, el borde y el margen. Es importante tener en cuenta que el tamaño total de la caja puede ser mayor que el tamaño especificado en el CSS, ya que se deben tener en cuenta todos los componentes del box model.
+      <br><br>
+      Por ejemplo, si se especifica un ancho de 200 píxeles y un relleno de 20 píxeles, el tamaño total de la caja sería de 240 píxeles de ancho (200 píxeles para el contenido y 20 píxeles de relleno en cada lado).
+
+      <h3>
+        Box-sizing
+      </h3>
+      La propiedad box-sizing en CSS permite especificar cómo se debe calcular el tamaño total de la caja. Hay dos valores posibles: content-box (valor por defecto) y border-box.
+      <br><br>
+      Cuando se utiliza content-box, el tamaño total de la caja se calcula sumando el tamaño del contenido, el relleno, el borde y el margen. Sin embargo, cuando se utiliza border-box, el tamaño total de la caja se calcula sumando el tamaño del contenido y el relleno, pero el borde y el margen se incluyen dentro del tamaño especificado en el CSS.
+      <br><br>
+      Por ejemplo, si se especifica un ancho de 200 píxeles y un relleno de 20 píxeles, el tamaño total de la caja sería de 220 píxeles de ancho si se utiliza content-box, pero sería de 200 píxeles de ancho si se utiliza border-box.
+
+      <h3>
+        Conclusión
+      </h3>
+      El box model es un concepto importante en CSS que permite entender cómo se calculan las dimensiones y posiciones de los elementos en una página web. Conocer cómo funciona el box model es fundamental para crear diseños web eficientes y consistentes.
+     </p>
+     <a href="#top">Volver arriba.</a>
+     <h2>Tema - Listas</h2>
+     <h3>Lista Ordenada.</h3>
+     <ol type="I">
+        <li>Lunes</li>
+        <li>Martes</li>
+        <li>Miercoles</li>
+        <li>Jueves</li>
+        <li>Viernes</li>
+     </ol>
+     <h3>
+      Lista desordenada.
+     </h3>
+     <ul type="circle">
+        <li> <a href="#"></a> Harina</li>
+        <li>Azucar</li>
+        <li>Huevo</li>
+        <li>Leche</li>
+        <li>Chocolate</li>
+     </ul>
+     <h3>
+      Lista de definición.
+     </h3>
+     <dl>
+      <dt>
+        JavaScript
+        <dd>
+          Descripcion.
+        </dd>
+      </dt>
+     </dl>
+     <dl>
+      <dt>
+        Python
+        <dd>
+          Descripcion.
+        </dd>
+      </dt>
+     </dl>
+     <a href="#top">Volver arriba.</a>
+</body>
+</html>

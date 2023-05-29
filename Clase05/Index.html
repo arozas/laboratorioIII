@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./src/scripts.js" type="module" defer></script>
+    <title>Clase de Formularios.</title>
+</head>
+<body>
+    <form action="#">
+        <label for="txtNombre">Nombre:</label>
+        <input type="text" title="Nombre" name="nombre" id="txtNombre" placeholder="Ingrese nombre" autocomplete="off">
+        <!--Con el autocomplete off le indico al html que elimine los nombres guardados que muestra-->
+        <label for="txtEmail">Email:</label>
+        <input type="email" title="Email" name="email"  id="txtEmail">
+        <!--
+            Con la propiedad title generamos un tooltip, que sirve para la accesibilidad
+            Ya que en el caso de los no videntes al hacer hoover por el input se leera este.
+        -->
+        <label for="txtEdad" >Edad:</label>
+        <input type="number" title="Edad" name="edad" id="txtEdad" min="18" max="65" value="20">
+        <input type="range" title="Edad con rango" name="edadDos" id="txtEdadDos" min="18" max="65" value="20">
+        <input type="color" title="Color" name="color" id="txtColor">
+        <label for="txtPassword">Clave:</label>
+        <!--Enviar el password de esta manera es insegura porque queda exguesta.
+            Siempre las claves hay que enviarlas por medio de un put y en el body
+            Por que for medio del get, queda expuesta en la url.    
+        -->
+        <input type="password" title="Clave" name="clave" id="txtPassword">
+        <fieldset>
+            <legend>Deporte</legend>
+            <input type="checkbox" name="deporte" value="Futbol" checked>Futbol <br/>
+            <input type="checkbox" name="deporte" value="Tenis">Tenis <br/>
+            <input type="checkbox" name="deporte" value="Golf">Golf <br/>
+        </fieldset>
+        <!--
+            Cuando usemos chekbox o radios vamos a dejar siempre uno checkeado por defecto
+            De esta forma siempre nos aseguramos un valor.
+        -->
+        <fieldset>
+        <legend>Genero</legend>
+        <input type="radio" name="genero" value="M" checked>Masculino. <br/>
+        <input type="radio" name="genero" value="F">Femenino. <br/>
+        </fieldset>
+        <input type="submit" value="Alta persona">
+        <input type="file">
+        <label for="selectLocalidad">Seleccione localidad:</label>
+        <select name="localidad" id="selectLocalidad">
+            <option value="quilmes">Quilmes</option>
+            <option value="avellaneda" selected>Avellaneda</option>
+            <option value="bernal">Bernal</option>
+            <option value="lanus">Lanús</option>
+        </select>
+    </form>
+    <button>Click me!</button>
+</body>
+</html>
+

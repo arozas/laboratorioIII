@@ -1,0 +1,231 @@
+ <!--
+    Clase 02 - 04/04/2023 - Profesor Christian Baus
+
+    JavaScript: Y su tipado dinámico.
+
+    Las variables de tipado dinámico significa más responsabilidad para el desarrollador, ya que debe controlar mucho más el paso de valor de ese valor, ya que puede mutar durante del codigo y generar errores, ya que una función puede estar esperando un tipo de valor y al final recibir otro, lo que genera un error.
+
+    Dependiende del navegador, la primera barrida al cargar una página puede reclamar el favicon, que es el logo que usa el navegador para mostrar en pestañas y otros lado de la interfaz del navegador, eso puede generar un error de que figura en la consola de las herramientas del navegador.
+
+    Archivo vectoriales:
+    Los archivos svg son archivos vectoriales simples que se generan por medio de formulas, lo que permiten que se renderice a cualquier tamaño.
+     --> 
+
+     <!DOCTYPE html>
+     <html lang="en">
+     <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-con">
+       <link rel="stylesheet" href="./css/estilos.css">
+       <script src="./src/scripts.js" defer></script> 
+       <title>Clase 02 - Laboratorio III</title>
+     </head>
+     <h1>Clase 02 - 04/04/2023</h1>
+     <a href="./index.html">Ir a página principal</a>
+     <body>
+       <h2>Interprete JavaScript</h2>
+       <p>
+         El interprete JavaScript es lo que se conoce como el motor del navegador, es el quien ejecuta el archivo JavaScript que le envia el servidor, leyendo linea a linea y ejecutando el código.
+         Cuando el procesador o sistema operativo tiene que ejecutar una serie de tareas, pueden aparecer tareas bloqueantes y tareas no bloqueantes. Este procesamiento puede ser sincrónico o asincronico.
+       </p>
+       <h2>La arquitectura Cliente - Servidor</h2>
+       <p>
+         La arquitectura cliente-servidor es un modelo de arquitectura de software en el que las aplicaciones se dividen en dos partes: el cliente y el servidor. En el contexto de la programación web, el cliente es el navegador web utilizado por el usuario para acceder a la aplicación, mientras que el servidor es la parte de la aplicación que procesa las solicitudes del cliente y envía las respuestas correspondientes.
+         <br><br>
+         En la arquitectura cliente-servidor, el cliente y el servidor se comunican entre sí a través de una red utilizando un protocolo de comunicación, como HTTP. Cuando el usuario realiza una solicitud al servidor a través del navegador web, el servidor procesa la solicitud y envía la respuesta correspondiente al navegador. El cliente y el servidor pueden estar en diferentes ubicaciones geográficas, y pueden ser implementados en diferentes lenguajes de programación y plataformas de hardware.
+         <br><br>
+         En la programación web, la arquitectura cliente-servidor se utiliza ampliamente para construir aplicaciones web escalables y eficientes. La separación de la aplicación en cliente y servidor permite que la lógica de la aplicación se divida en diferentes capas, lo que mejora la mantenibilidad, la escalabilidad y la seguridad de la aplicación.
+         <br><br>
+         Por eso son importane los conceptos de sincrónia y asincronia como concurrencia y paralelismo, ya que en esta arquitectura una programación sincrónia puede generar que una petición al servidor tarde, bloqueando la aplicación generando una mala experiencia de usuario.
+         <br><br>
+         En resumen, la arquitectura cliente-servidor es un modelo de arquitectura de software en el que las aplicaciones se dividen en dos partes: el cliente y el servidor. En el contexto de la programación web, el cliente es el navegador web utilizado por el usuario para acceder a la aplicación, mientras que el servidor es la parte de la aplicación que procesa las solicitudes del cliente y envía las respuestas correspondientes. Esta arquitectura se utiliza ampliamente en la programación web para construir aplicaciones escalables y eficientes.
+       </p>
+       <h3>Procesamiento Sincrónico</h3>
+       <p>
+         El procesamiento síncrono en la programación web es un enfoque de programación en el que una tarea debe completarse antes de que se pueda continuar con la siguiente tarea. En este enfoque, el programa espera a que se complete una tarea antes de ejecutar la siguiente tarea.
+         <br><br>
+         Esto significa que el servidor web procesa las solicitudes una por una en secuencia, esperando a que se complete una solicitud antes de pasar a la siguiente solicitud. Esto puede hacer que el programa sea menos eficiente y escalable, especialmente cuando hay muchas solicitudes concurrentes.
+         <br><br>
+         En términos más técnicos, el procesamiento síncrono utiliza técnicas de programación en las que la ejecución del programa se bloquea hasta que se complete una tarea. Por ejemplo, cuando se realiza una solicitud HTTP sincrónica, el programa espera a que se complete la solicitud antes de continuar.
+         <br><br>
+         En resumen, el procesamiento síncrono en la programación web puede hacer que el programa sea menos eficiente y escalable, ya que espera a que se complete una tarea antes de continuar con la siguiente tarea. En cambio, el procesamiento asíncrono permite que el programa continúe ejecutando otras tareas mientras espera a que se complete una tarea específica, lo que puede mejorar el rendimiento y la escalabilidad de las aplicaciones web.
+       </p>
+       <h3>Procesamiento Asincrónico</h3>
+       <p>
+         El procesamiento asincrónico en la programación web es un enfoque de programación que permite que el código se ejecute de manera no bloqueante, lo que significa que el programa no espera a que una tarea se complete antes de pasar a la siguiente. En lugar de eso, el programa sigue ejecutando otras tareas mientras espera a que se complete una tarea específica.
+         <br><br>
+         Esto significa que el servidor web puede recibir y procesar múltiples solicitudes al mismo tiempo sin bloquear el hilo de ejecución del servidor. Esto es especialmente útil en aplicaciones web que tienen muchas solicitudes concurrentes.
+         <br><br>
+         En términos más técnicos, el procesamiento asincrónico utiliza técnicas de programación como callbacks, promesas y async/await para manejar tareas de manera asíncrona. Esto permite que el programa continúe ejecutándose mientras espera que una tarea se complete, en lugar de bloquearse hasta que se complete la tarea.
+         <br><br>
+         Resumiendo, el procesamiento asincrónico en la programación web permite que las aplicaciones web manejen solicitudes de manera más eficiente y escalable al permitir que múltiples solicitudes se manejen al mismo tiempo sin bloquear el hilo de ejecución del servidor.
+       </p>
+       <h4>TABLAS</h4>
+       <P>se puede decir que:</P>
+         <table>
+             <tbody>
+             <tr>
+                 <td>BLOQUEANTES</td>
+                 <td> <======> </td>
+                 <td>SINCRÓNICO</td>
+             </tr>
+             <tr>
+                 <td>NO BLOQUEANTES</td>
+                 <td> <======> </td>
+                 <td>ASINCRÓNICO</td>
+             </tr>
+             </tbody>
+         </table>
+       <h3>Concurrencia</h3>
+       <p>
+         La concurrencia en el contexto de la programación web se refiere a la capacidad de una aplicación para manejar múltiples tareas simultáneamente, especialmente en situaciones de alta carga de trabajo. En otras palabras, la concurrencia permite que el programa realice varias tareas al mismo tiempo en lugar de esperar a que se complete una tarea antes de comenzar la siguiente.
+         <br><br>
+         La concurrencia es importante porque las aplicaciones web deben manejar múltiples solicitudes de los usuarios al mismo tiempo. Por ejemplo, si un sitio web tiene muchos usuarios que realizan solicitudes simultáneamente, la aplicación debe ser capaz de manejar estas solicitudes simultáneamente para evitar tiempos de espera prolongados y mejorar la experiencia del usuario.
+         <br><br>
+         En términos más técnicos, la concurrencia en la programación web se logra mediante la implementación de técnicas como el procesamiento asíncrono, la utilización de múltiples hilos de ejecución y la creación de procesos paralelos. Estas técnicas permiten que el programa maneje múltiples solicitudes simultáneamente sin bloquear el hilo de ejecución principal. La concurrencia es una parte importante de la programación web porque permite que las aplicaciones manejen múltiples solicitudes de manera simultánea, lo que mejora el rendimiento y la experiencia del usuario. La implementación de técnicas de concurrencia como el procesamiento asíncrono y la utilización de múltiples hilos de ejecución puede ayudar a mejorar la capacidad de una aplicación para manejar cargas de trabajo elevadas.
+         <br><br>
+         Cabe destacar que el interprete de JavaScript es concurrente por que tiene un solo event loop que atiende una vez por vez.
+       </p>
+       <h3>Parelelismo</h3>
+       <p>
+         El paralelismo se refiere a la capacidad de una aplicación para realizar múltiples tareas al mismo tiempo utilizando varios procesadores o núcleos de procesamiento en paralelo. En otras palabras, el paralelismo permite que una aplicación divida una tarea en varias partes que pueden ser procesadas simultáneamente, mejorando así la eficiencia y el rendimiento de la aplicación. El paralelismo puede ser utilizado para manejar cargas de trabajo elevadas, como múltiples solicitudes de usuarios simultáneos. Por ejemplo, una aplicación web puede utilizar el paralelismo para dividir una tarea en varias partes y procesar cada parte en diferentes procesadores o núcleos de procesamiento, lo que permite que la tarea se complete más rápido.
+         <br><br>
+         En términos técnicos, el paralelismo en la programación web se logra utilizando técnicas como la programación multihilo, la programación multiproceso y la programación en clúster. Estas técnicas permiten que una aplicación utilice múltiples procesadores o núcleos de procesamiento para realizar tareas simultáneamente, lo que mejora la eficiencia y el rendimiento de la aplicación.
+         <br><br>
+         En resumen, el paralelismo es una técnica importante en la programación web que permite que una aplicación divida una tarea en varias partes que pueden ser procesadas simultáneamente en diferentes procesadores o núcleos de procesamiento. Esto mejora la eficiencia y el rendimiento de la aplicación, especialmente en situaciones de alta carga de trabajo.
+       </p>
+       <h3 id="eventLoop">Event Loop - Bucles de eventos</h3>
+       <p>
+         El event loop es un mecanismo fundamental en la programación JavaScript. En términos simples, el event loop es un ciclo de eventos que se ejecuta en segundo plano en el navegador, y es responsable de manejar la ejecución de todas las funciones y eventos en JavaScript.
+         <br><br>
+         En JavaScript se ejecuta en un solo hilo en el navegador, lo que significa que sólo puede ejecutar una tarea a la vez. Sin embargo, en una aplicación web, hay muchas tareas que necesitan ser procesadas simultáneamente, como las solicitudes del usuario, el procesamiento de la lógica de la aplicación, la manipulación del DOM, etc. El event loop permite que el navegador maneje todas estas tareas sin bloquear la ejecución del código JavaScript.
+         <br><br>
+         El event loop funciona de la siguiente manera: cuando una función se ejecuta en JavaScript, se agrega a la pila de ejecución (Call Stack). Si la función es síncrona, se ejecuta inmediatamente. Si la función es asíncrona, se envía a la cola de eventos. El event loop monitorea constantemente la cola de eventos y verifica si hay eventos pendientes que puedan ser procesados. Si hay eventos pendientes en la cola, el event loop los procesa en orden secuencial, ejecutando las funciones correspondientes. Cuando una función asíncrona se completa, se envía a la cola de eventos para su procesamiento posterior.
+         <br><br>
+         En terminos más técnicos el event loop en JavaScript es un mecanismo de procesamiento de eventos que permite que el navegador maneje tareas asíncronas y no bloqueantes en la programación web. Cuando se ejecuta una tarea asíncrona en JavaScript, como una solicitud de red o una animación, esta tarea se envía a la cola de tareas, que se procesa por el event loop.
+         <br><br>
+         El event loop es un bucle que se ejecuta en segundo plano y que sigue dos fases principales: la fase de espera y la fase de procesamiento de tareas. En la fase de espera, el event loop espera a que lleguen nuevas tareas a la cola de tareas. Cuando se completa una tarea asíncrona, como una solicitud de red, se agrega a la cola de tareas para su procesamiento posterior.
+         <br><br>
+         En la fase de procesamiento de tareas, el event loop procesa cada tarea de la cola de tareas de forma sincrónica y en orden secuencial. Cada tarea se procesa completamente antes de pasar a la siguiente tarea en la cola de tareas. Durante el procesamiento de cada tarea, se pueden agregar nuevas tareas a la cola de tareas, lo que se procesará en la siguiente iteración del bucle del event loop.
+         <br><br>
+         Cuando una tarea se procesa en el event loop, se ejecuta su callback o función de retorno de llamada. La función de retorno de llamada es la que se ejecutará cuando se complete la tarea asíncrona. Por ejemplo, cuando se completa una solicitud de red, la función de retorno de llamada se ejecutará con los datos devueltos por la solicitud.
+         <br><br>
+         Es importante tener en cuenta que JavaScript es un lenguaje de programación de un solo subproceso, lo que significa que solo puede ejecutar una tarea a la vez. El event loop permite que se manejen tareas asíncronas y no bloqueantes de manera eficiente en un entorno de programación de un solo subproceso.
+         <br><br>
+         En resumen, el event loop en JavaScript es un mecanismo fundamental para manejar tareas asíncronas y no bloqueantes en la programación web. Es un bucle que se ejecuta en segundo plano y que procesa tareas en una cola de tareas. Cada tarea se procesa de forma sincrónica y se ejecuta su función de retorno de llamada. El event loop permite que se manejen tareas asíncronas y no bloqueantes de manera eficiente en un entorno de programación de un solo subproceso.
+       </p>
+       <h3>Ejemplo de ejecución sincrónica:</h3>
+       <code>
+         <ol>
+           <li>function f1(){</li>
+           <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log("Estoy en f1");</li>
+           <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f2();</li>
+           <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log("Estoy al final f1");</li>
+           <li>}</li>
+           <li>function f2(){</li>
+           <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log("Estoy en f2");</li>
+           <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f2();</li>
+           <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log("Estoy al final f2");</li>
+           <li>}</li>
+           <li>function f3(){</li>
+           <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log("Estoy en f3");</li>
+           <li>}</li>
+           <li>console.log("Inicio");</li>
+           <li>f1();</li>
+           <li>cosole.log("Fin");</li>
+         </ol>
+     </code>
+     <p>
+       En este Script lo primero ejecutablo leyendo de forma secuencial es la linea 14, donde se encuentra la llamada a función; la funcion:
+       <code>
+       <ol start="14">
+         <li>console.log("Inicio");</li>
+       </ol>
+       </code>
+       Al llamarse esta función y ejecutarse el código, el mismo se carga en el stack, lo que se ejecuta es lo que esta cargado en el stack. A diferencia de un programa compilado donde el entry point esta en el "main", en JavaScript tenemos un script, donde lee hasta encontrar código ejecutable, que lo carga en el stack, lo cual es una pila LIFO (Last In First Out), lo último que entra es lo primero que sale. Por eso siguiendo el hilo de ejecución la función se ejucuta desde el stack, muestra el mensaje de "Inicio" y deja el stack vacío, esperando que el interprete encuentre otra linea de código ejecutable para cargar en el stack, siguiendo con el código de ejemplo seria la linea 15:
+       <code>
+         <ol start="15">
+           <li>f1();</li>
+         </ol>
+       </code>
+       Ahora se carga la función f1 en el stack y el event loop se concentra en esta función. Esta linea contiene la llamada a esa función, que en su posición de memoria nos lleva a la linea 1 donde esta declarada con su código ejecutable:
+       <code>
+         <ol>
+           <li>function f1(){</li>
+           <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log("Estoy en f1");</li>
+           <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f2();</li>
+           <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log("Estoy al final f1");</li>
+           <li>}</li>
+         </ol>
+       </code>
+       En JavaScript el interprete hace una doble barrida del script, en el primer barrido detecta todas las declaraciones de variables y reserva espacio en memoria. Por eso ya tiene las funciones cargadas en memoria sin ejecutar una linea ejecutable. Ahora en el callstack del interprete podemos empezar a ver cuales son las tareas bloqueadas:
+       <br><br>
+       CALLSTACK:
+       <code>
+         <ol>
+           <li>console.log("Estoy en f1")</li>
+           <li>f1()</li>
+         </ol>
+       </code>
+       Podemos ver como en el stack el console.log esta apilado en f1, y que la prioridad de ejecución del event loop en este momento es la ejecución del console.log, porque al ser una pila lo primero en ejecutarse es lo que se encuentra en el tope de la misma, cuando se ejecuta el punto del programa vuelve a la misma donde se quedo de la función, ahora llendo a la linea 3 del script:
+       <code>
+         <ol start="3">
+           <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f2();</li>
+         </ol>
+       </code>
+       Ahora en el callstack queda cargada la llamada a la función f2 y f1 queda bloqueada hasta que f2 termine de ejecutarse. El interprete al ejecutar f2 va ir de la linea 3 a la 7 del código de ejemplo:
+       <code>
+         <ol start="6">
+           <li>function f2(){</li>
+           <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log("Estoy en f2");</li>
+         </ol>
+       </code>
+       El primer código ejecutable que va encontrar el interprete es el console.log de la linea 7 que va a cargar en el callstack para su posterior ejecución, bloqueando de esta manera la función f2:
+       <br><br>
+       CALLSTACK:
+       <code>
+         <ol>
+           <li>console.log("Estoy en f2")</li>
+           <li>f2()</li>
+           <li>f1()</li>
+         </ol>
+       </code>
+       Ahora ejecuta el console.log lo saca del stack y vuelve el loop a leer la función ejecutando la linea 8 del código de ejemplo, cargando en el stack la función f3 dejando de nuevo bloquadas f1 y f2:
+       <br><br>
+       CALLSTACK:
+       <code>
+         <ol>
+           <li>f3()</li>
+           <li>f2()</li>
+           <li>f1()</li>
+         </ol>
+       </code>
+       Ahora lo que se va ejecutar es f3 sumando al Call stack el console.log, quedando encima de la pila y con la prioridad de ejecución:
+       <br><br>
+       CALLSTACK:
+       <code>
+         <ol>
+           <li>console.log("Estoy en f3");</li>
+           <li>f3()</li>
+           <li>f2()</li>
+           <li>f1()</li>
+         </ol>
+       </code>
+       Este loop continua hasta finalizar con el script, lo podemos ver en acción cargando el código en http://latentflip.com/loupe/ y dando run. De esta forma podemos ver de forma clara como funciona un aplicación de forma sincrónica.
+     </p>
+     <h3>Ejemplo de ejecución asincrónica:</h3>
+     <code>
+       <ol>
+         <li>console.log("Inicio");</li>
+         <li>setTimeout(function(){console.log("finalizó funcion 1")},5000);</li>
+         <li>setTimeout(function(){console.log("finalizó funcion 2")},3000);</li>
+         <li>setTimeout(function(){console.log("finalizó funcion 3")},1000);</li>
+         <li>console.log("Fin");</li>
+       </ol>
+     </code>
+     <p>
+       El código anterior se ejecuta forma secuencial, pero la función setTimeout al ser una función asicronica no detiene la ejecución de la aplicación por eso aunque aún no haya finalizado no bloquea la cola de ejecución y sigue es interprete ejecutando el código, mientras las funciones asicronica quedan procesando. Una vez que terminan de procesar las funciones retornan al callback queue, que es una cola de espera FIFO (First In First Out), por lo tanto el primer retorno de la funciones asincrónicas en entrar va ser la primera en salir, esto lo podemos ver en acción cargando el código en http://latentflip.com/loupe/
+     </p>
+     </body>
+     </html>

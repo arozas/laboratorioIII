@@ -1,0 +1,86 @@
+<!DOCTYPE html> <!-- Indica que el documento sigue las normas de HTML5 -->
+<html lang="en"> <!-- Abre el documento HTML e indica que el idioma de la página es en inglés (por defecto) -->
+    <head> <!-- Abre la sección de cabecera del documento -->
+        <meta charset="UTF-8">  <!-- Especifica la codificación de caracteres utilizada en el documento (en este caso, UTF-8) -->
+        <meta name="description" content="Esta es una breve descripción de la página"> <!-- Proporciona una descripción del contenido de la página para los motores de búsqueda -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <!--
+             El viewport es la parte visible de la página, el ancho sea el ancho del dispositivo 
+             y que no lo escale.
+            --> 
+        <title>Título de la página</title> <!-- Define el título del documento que se muestra en la pestaña del navegador -->
+        <style>
+        </style> <!-- Con Style podemos embeber código CSS, pero no es una buena practica, es mejor hacerlo en una página de estilos y linkearla como se ve a continuación--> 
+        <link rel="stylesheet" href="estilos.css"> <!-- Enlaza el documento CSS que se utilizará para dar estilo a la página -->
+        <script>
+            function Saludar(){
+                alert('Este alert esta en una función de JS embebido en HTML')
+            }
+        </script><!-- Todo lo que escribimos en esta etiqueta es código JS embebido, una mala practica, debemos linkear un archivo JS, el source del código por medio de src--> 
+        <script src="scripts.js" defer></script>  <!--Esta linea carga el source, y aca no puede tomar los botones o el cuerpo, por eso debemos empezar hacer programación sincrónica, una mala solución es llevarla al final del body, con defer le decimos que cargue el src cuando carge el final de la página--> 
+        <!--
+            Todo lo que escribimos en el head son los metadatos
+        --> 
+    </head>
+    <body>
+         <!--
+            Todo lo que escribimos en el body son los es lo que vemos en la página
+        --> 
+        <header> <!-- Abre la sección de encabezado -->
+            <h1 style="background-color: blue;">Título engañoso</h1> <!--título principal--> 
+            <!--Este titulo tiene un style interno de css que le da color, pero no es una buena practica, -->
+            <nav> <!-- Abre la sección de navegación -->
+              <ul> <!-- Abre una lista desordenada -->
+                <li><a href="#">Enlace 1</a></li> <!-- Crea un enlace con texto "Enlace 1" -->
+                <li><a href="#">Enlace 2</a></li> <!-- Crea un enlace con texto "Enlace 2" -->
+                <li><a href="#">Enlace 3</a></li> <!-- Crea un enlace con texto "Enlace 3" -->
+              </ul> <!-- Cierra la lista desordenada -->
+            </nav> <!-- Cierra la sección de navegación -->
+        </header> <!-- Cierra la sección de encabezado -->
+
+          <main> <!-- Abre la sección principal -->
+            <article> <!-- Abre un artículo -->
+              <h2>Título del artículo</h2> <!-- Define un encabezado de nivel 2 o subtitulo para el artículo -->
+              <h3>Título engañoso</h3>
+              <!--Subtitulo 2--> 
+              <h4>Título engañoso</h4>
+              <h5>Título engañoso</h5>
+              <h6>Título engañoso</h6>
+              <!-- 
+                  Los h son los encabezados, hay h1, 2, 3, 4, 5 y 6
+                  Esto enmarca una jerarquia, lo visual lo manejamos con CSS, no con HTML.
+              --> 
+              <p>
+                Este es un párrafo de texto dentro del artículo.
+                <button onclick="Saludar();alert('Embeber código JS en HTML no es una buena practica.')">Saludar</button> <!-- Genera un botón y tiene un evento con JS embebido, con un alert con un mensaje, de nuevo estos embebidos no son una buenas practicas-->
+                <button onclick="Saludar2()">Saludar desde archivo</button>
+                <button id="btn-saludo3">Saludar sin JS embebido</button>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo sit, rerum unde dolore dolorem ad, nam nemo minima quae ullam laborum similique enim odit. Libero voluptas eaque doloribus facilis vitae?as
+              </p> <!-- Crea un párrafo de texto dentro del artículo -->
+
+              <!--
+                  La etiqueta p viene de paragraph, de párrafo, como la mayoría de las etiquetas se hereda del mundo editorialcomo en un libro tiene un salto de linea antes y después.
+  
+                  Para rellenar y diagramar el maquetado se usa un texto de relleno lorem ipsum para simular el texto con emmet con escribiendo Lorem y tab usar el texto generado:
+                          con lorem * 20 - escribe veinte párrafos
+                          con loren200 - escride el loren con 200 
+  
+                  
+                  buscar "Programación Zen" una forma de programar con abreviaturas que facilita la velocidad de maquetado en html.
+  
+                  Para dejar espacios en blanco en los textos tenemos que usar cáracteres especiales como &nsbp; por defecto solo hay un solo espacio en blanco.
+              --> 
+              <ul> <!-- Abre una lista desordenada -->
+                <li>Elemento de lista 1</li> <!-- Crea un elemento de lista con texto "Elemento de lista 1" -->
+                <li>Elemento de lista 2</li> <!-- Crea un elemento de lista con texto "Elemento de lista 2" -->
+                <li>Elemento de lista 3</li> <!-- Crea un elemento de lista con texto "Elemento de lista 3" -->
+              </ul> <!-- Cierra la lista desordenada -->
+              <img src="imagen.jpg" alt="Texto alternativo de la imagen"> <!-- Inserta una imagen con su correspondiente texto alternativo -->
+            </article> <!-- Cierra el artículo -->
+          </main> <!-- Cierra la sección principal -->
+
+          <footer> <!-- Abre la sección de pie de página -->
+            <p>Este es el pie de página.</p> <!-- Crea un párrafo de texto dentro del pie de página -->
+          </footer> <!-- Cierra la sección de pie de página -->
+     </body> <!-- Cierra la sección de cuerpo del documento -->
+</html>

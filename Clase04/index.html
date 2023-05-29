@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Página de la cuarto clase de Laboratorio III de la UTN. Dictada por el Profesor Christian Baus.">
+        <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-con">
+        <link rel="stylesheet" href="./css/estilos.css">
+        <!-- 
+            <script scr="./src/matematica.js"></script> 
+            con el "import podemos pasar todo al js principal y olvidarnos de cargar el source en el html, por que lo lee del script principal."
+        -->
+        <script src="./src/scripts.js" type="module" defer></script>
+        <title>Clase 04 - Laboratorio III</title>
+      </head>
+<body>
+    <h2>Tema - Formularios</h2>
+    <section>
+        <span>
+            <p>
+                <!-- El html es el unico que pide archivos al servidor. Con node se tuvo que inventar un sistema de importación de modulos -->
+            </p>
+        </span>
+    </section>
+    <!-- 
+        En el action va la pagina que queremos procesar.
+        En el method va el verbo http que vamos a solicitar.
+    
+    -->
+    <form action="#" method="">
+        <!--
+            Es como la etiqueta label de winForms me permite etiquetar un elemento
+        -->
+        <label for="txtNombre">Nombre:</label>
+        <!--
+            input una caja, que por defecto es una caja de text
+            se puede decorar con valores boleanos:
+            readonly - solo lectura
+            required - que es necesario, requerido.
+            placeholder - nos permite agregar una leyenda 
+        -->
+        <input type="text" name="nombre" id="txtNombre" placeholder="Ingrese un nombre aquí.">
+        <label for="txtEmail">Email:</label>
+        <input type="email" name="email" id="txtEmail" placeholder="Ingrese un email aquí.">
+        <!--
+            input un botón, que dispara el evento del formulario
+        -->
+        <input type="submit">
+    </form>
+</body>
+</html>

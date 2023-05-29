@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Página de la tercer clase de Laboratorio III de la UTN. Dictada por el Profesor Christian Baus.">
+        <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-con">
+        <link rel="stylesheet" href="./css/estilos.css">
+        <title>Clase 03 - Laboratorio III</title>
+      </head>
+      <body>
+        <h1>Las etiquetas y la diagramación de la pagina</h1>
+        <div id="introduccion">
+            <h2>
+                Introducción.
+            </h2>
+            <span>
+                <p>
+                    Antiguamente para la diagramación y los esquemas de las páginas web se realizaban con las etiquetas div y span, que son etiquetas html contenedoras que no modifican la apariencia de la web ni son semanticas, por lo tanto su función era la de agrupar elementos internamente, aprovechando el Box Model. Div es una etiqueta en bloque y spam es una etiqueta inline, por lo tanto nos sirven cada una para agrupar elementos y texto respectivamente.
+                    <br><br>
+                    Su función real es la de agrupar estos elementos para luego ser apuntados por el script JavaScript o por lo hoja de estilo de CSS. 
+                    <br><br>
+                    El problema del uso esta etiquetas es el sobreuso de estas etiquetas, lo que generaba un código de marcado o de maquetado ilegible, en su momento esto se solventaba con el uso de los IDs que nos permitia por medio de ese atributo identificar cada una de esas etiquetas.
+                    <br><br>
+                    Apartir de que aparece HTML 5, la web semantica y sobre todo el analisis de posicionamiento de los motores be busqueda, la forma de diagramar y agrupar los elementos cambió.
+                </p>
+            </span>
+        </div>
+        <section>
+            <h2>
+                Etiqueta &lt;section>.
+            </h2>
+            <span>
+                <p>
+                    El elemento &lt;section> de HTML es una etiqueta que se utiliza para definir secciones de contenido en una página web. Se utiliza para agrupar contenido relacionado y facilitar la lectura y comprensión de la página. 
+                    <br><br>
+                    La etiqueta &lt;section> se puede utilizar en diferentes contextos y se puede anidar en otras secciones para crear una estructura jerárquica. El contenido de una sección puede incluir otros elementos HTML, como encabezados (&lt;h1>-&lt;h6>), párrafos (&lt;p>), listas (&lt;ul>, &lt;ol>) e incluso otras secciones (&lt;section>).
+                    <br><br>
+                    Una sección debe ser independiente y autónoma en términos de contenido. Es decir, debe poder ser leída y comprendida por sí sola, sin depender del contexto en el que se encuentra. Además, una sección debe tener un encabezado que describa el contenido que contiene. El encabezado puede ser un &lt;h1>-&lt;h6> o cualquier otro elemento de encabezado apropiado.
+                    <br><br>
+                    La etiqueta &lt;section> es muy útil para estructurar el contenido de una página web, especialmente en páginas largas con muchos elementos. Ayuda a los usuarios a comprender la organización y jerarquía del contenido y puede mejorar la accesibilidad y la usabilidad de la página.
+                    <br><br>
+                    Ejemplo de uso:
+                    <pre><code>
+                        &lt;section>
+                            &lt;h2>Introducción&lt;/h2>
+                            &lt;p>Este es un párrafo introductorio que describe el tema del artículo.&lt;/p>
+                        &lt;/section>
+                            
+                        &lt;section>
+                            &lt;h2>Desarrollo&lt;/h2>
+                            &lt;p>En esta sección se presentan los detalles del tema, divididos en subsecciones.&lt;/p>
+                            &lt;section>
+                                &lt;h3>Subsección 1&lt;/h3>
+                                &lt;p>Este es el contenido de la subsección 1.&lt;/p>
+                             &lt;/section>
+                            &lt;section>
+                                &lt;h3>Subsección 2&lt;/h3>
+                                &lt;p>Este es el contenido de la subsección 2.&lt;/p>
+                            &lt;/section>
+                        &lt;/section>
+
+                        &lt;section>
+                            &lt;h2>Conclusión&lt;/h2>
+                            &lt;p>En esta sección se presentan las conclusiones del artículo.&lt;/p>
+                        &lt;/section>
+                    </code></pre>
+                    En el ejemplo anterior, se utiliza la etiqueta &lt;section> para agrupar los diferentes elementos del artículo en tres secciones principales: Introducción, Desarrollo y Conclusión. Cada sección tiene un encabezado descriptivo y contiene el contenido relacionado. La sección de Desarrollo también contiene dos subsecciones anidadas.
+                    <br><br>
+                    Algunos de los beneficios de utilizar la etiqueta &lt;section> son:
+                    <ol>
+                        <li>
+                            Mejora la accesibilidad: Al utilizar una estructura de secciones clara y bien definida, se facilita la navegación y comprensión de la página para las personas que utilizan lectores de pantalla o tienen discapacidades visuales.
+                        </li>
+                        <li>
+                            Mejora el SEO: Al utilizar una estructura de secciones clara y bien definida, se mejora la capacidad de los motores de búsqueda para indexar y entender el contenido de la página.
+                        </li>
+                        <li>
+                            Mejora la usabilidad: Al utilizar una estructura de secciones clara y bien definida, se facilita la navegación y comprensión de la página para los usuarios.
+                        </li>
+                        <li>
+                            Facilita el mantenimiento y la actualización del contenido: Al dividir el contenido en secciones lógicas y autónomas, se facilita la actualización y el mantenimiento del contenido de la página.
+                        </li>
+                    </ol>
+                    Es importante destacar que el uso excesivo de la etiqueta &lt;section> puede tener un efecto negativo en la accesibilidad y usabilidad de la página. Es recomendable utilizar la etiqueta con moderación y asegurarse de que cada sección sea clara, bien definida y autónoma. Además, es importante utilizar los elementos de encabezado adecuados para cada sección y asegurarse de que sean jerárquicamente coherentes.
+                </p>
+            </span>
+        </section>
+        <section>
+            <h2>
+                Etiqueta &lt;header>>.
+            </h2>
+            <span>
+                <p>
+                    El elemento &lt;header> es un elemento semántico en HTML que se utiliza para definir el encabezado o cabecera de una página o sección de una página web. El contenido que se encuentra dentro de la etiqueta &lt;header> suele ser contenido introductorio o informativo, como el título principal de la página, el logotipo de la marca, la información de contacto, el menú de navegación principal, etc.
+                    <br><br>
+                    El elemento &lt;header> se utiliza para proporcionar una estructura semántica clara y coherente para el contenido de la cabecera de una página o sección de una página web. Esto facilita la navegación y comprensión del contenido de la página para los usuarios y los motores de búsqueda.
+                    <br><br>
+                    El elemento &lt;header> puede contener cualquier tipo de contenido HTML, como encabezados, párrafos, imágenes, listas, enlaces, etc. También se puede utilizar junto con otros elementos semánticos como &lt;nav>, &lt;h1>, &lt;h2>, &lt;h3>, etc. para proporcionar una estructura semántica clara y coherente.
+                    <br><br>
+                    Es importante destacar que el uso adecuado del elemento &lt;header> puede mejorar la accesibilidad y la usabilidad de una página web. Al proporcionar una estructura semántica clara y coherente para el contenido de la cabecera de la página, se facilita la navegación y comprensión del contenido para las personas que utilizan lectores de pantalla o tienen discapacidades visuales. Además, el uso adecuado del elemento &lt;header> también puede mejorar la optimización para motores de búsqueda al indicar claramente qué parte del contenido es de cabecera y qué parte es de contenido principal.
+                </p>
+            </span>
+        </section>
+        <section>
+            <h2>
+                Etiqueta &lt;nav>.
+            </h2>
+            <span>
+                <p>
+                    El elemento &lt;nav> es un elemento semántico en HTML que se utiliza para definir un bloque de enlaces de navegación. Este elemento se utiliza para agrupar enlaces que permiten a los usuarios navegar por diferentes secciones de un sitio web, como por ejemplo enlaces a páginas de inicio, acerca de nosotros, productos, servicios, contacto, etc.
+                    <br><br>
+                    El elemento &lt;nav> se debe utilizar cuando el bloque de enlaces de navegación es parte del contenido principal de la página, y no se debe utilizar para enlaces secundarios o de navegación externa que no estén relacionados con el contenido de la página actual.
+                    <br><br>
+                    El elemento &lt;nav> puede contener cualquier tipo de enlace, incluyendo enlaces a otras páginas web, secciones del sitio web, anclas internas en la misma página, etc. También puede contener otros elementos HTML como encabezados, párrafos, listas, imágenes, etc. para proporcionar más contexto sobre los enlaces de navegación.
+                    <br><br>
+                    Es importante destacar que el elemento &lt;nav> no proporciona ningún estilo o diseño por sí mismo, por lo que es necesario aplicar estilos CSS para dar formato al bloque de enlaces de navegación.
+                    <br><br>
+                    El uso adecuado del elemento &lt;nav> puede mejorar la accesibilidad y la usabilidad de un sitio web al proporcionar una estructura semántica clara y coherente para la navegación. Además, también puede mejorar la optimización para motores de búsqueda al indicar claramente qué parte del contenido es de navegación y qué parte es de contenido principal.
+                </p>
+            </span>
+        </section>
+        <section>
+            <h2>
+                Etiqueta &lt;main>.
+            </h2>
+            <span>
+                <p>
+                    El elemento &lt;main> es un elemento semántico en HTML que se utiliza para indicar el contenido principal o central de una página web. Este elemento se utiliza para separar el contenido principal del contenido secundario, como la cabecera, el pie de página, las barras laterales y otros elementos de navegación.
+                    <br><br>
+                    El elemento &lt;main> se utiliza para proporcionar una estructura semántica clara y coherente para el contenido principal de una página web. Este elemento se utiliza generalmente una sola vez en una página web y contiene el contenido principal de la página. El contenido que se encuentra dentro de la etiqueta &lt;main> suele ser el contenido que se muestra primero al cargar la página, como los artículos de un blog, el contenido principal de una página de productos o servicios, etc.
+                    <br><br>
+                    El uso adecuado del elemento &lt;main> es importante para la accesibilidad y la usabilidad de una página web. Al proporcionar una estructura semántica clara y coherente para el contenido principal de una página, se facilita la navegación y comprensión del contenido para los usuarios y los motores de búsqueda. Además, el uso adecuado del elemento &lt;main> también puede mejorar la accesibilidad para las personas que utilizan lectores de pantalla o tienen discapacidades visuales.
+                    <br><br>
+                    Es importante destacar que el elemento &lt;main> no debe utilizarse para separar el contenido secundario o el contenido adicional de una página. En su lugar, se deben utilizar elementos semánticos adecuados como &lt;header>, &lt;footer>, &lt;nav>, &lt;aside> y otros elementos para separar y definir claramente el contenido secundario y adicional.                        
+                </p>
+            </span>
+        </section>
+        <section>
+            <h2>
+                Etiqueta &lt;article>>.
+            </h2>
+            <span>
+                <p>
+                    El elemento &lt;article> en HTML se utiliza para representar una sección autónoma y completa de contenido que puede ser distribuida, reutilizada o citada de forma independiente del resto de la página web. Es un elemento semántico que indica que el contenido dentro de él es independiente del resto del contenido de la página y puede ser considerado como una entidad completa en sí mismo.
+                    <br><br>
+                    El elemento &lt;article> se utiliza para encapsular un contenido que tiene una idea o tema principal. Se puede utilizar para representar artículos de noticias, entradas de blog, reseñas de productos, publicaciones de redes sociales y cualquier otro tipo de contenido que pueda ser distribuido de forma independiente.
+                    <br><br>
+                    Es importante tener en cuenta que el elemento &lt;article> no debe confundirse con el elemento &lt;section>. Mientras que el elemento &lt;section> se utiliza para agrupar contenido relacionado temáticamente, el elemento &lt;article> se utiliza para representar una pieza completa e independiente de contenido.
+                    <br><br>
+                    El elemento &lt;article> se puede utilizar dentro de cualquier elemento de sección de HTML, como &lt;body>, &lt;section>, &lt;aside>, &lt;nav>, entre otros. Es común utilizar el elemento &lt;header> y &lt;footer> dentro del elemento &lt;article> para proporcionar información adicional, como el título del artículo y la fecha de publicación.
+                    <br><br>
+                    En resumen, el elemento &lt;article> es un elemento semántico en HTML que se utiliza para representar una sección autónoma y completa de contenido que puede ser distribuida, reutilizada o citada de forma independiente del resto de la página web. Este elemento se utiliza para encapsular contenido que tiene una idea o tema principal y puede ser utilizado dentro de cualquier elemento de sección de HTML.
+                </p>
+            </span>
+        </section>
+        <section>
+            <h2>
+                Etiqueta &lt;aside>.
+            </h2>
+            <span>
+                <p>
+                    El elemento &lt;aside> en HTML se utiliza para representar contenido relacionado pero secundario al contenido principal de una página web. Es un elemento semántico que indica que el contenido dentro de él está relacionado con el contenido principal, pero no es esencial para entenderlo.
+                    <br><br>
+                    El elemento &lt;aside> se puede utilizar para una amplia variedad de contenidos relacionados, como publicidad, enlaces relacionados, biografías, información adicional, redes sociales, entre otros. El contenido dentro del elemento &lt;aside> puede ser presentado de diferentes maneras, como texto, imágenes, video, audio o cualquier otro tipo de contenido.
+                    <br><br>
+                    Es importante tener en cuenta que el elemento &lt;aside> no debe utilizarse para el contenido principal de una página web. En lugar de eso, debe utilizarse para contenido relacionado secundario que no sea esencial para la comprensión del contenido principal.
+                    <br><br>
+                    El elemento &lt;aside> se puede utilizar dentro de cualquier elemento de sección de HTML, como &lt;body>, &lt;section>, &lt;article>, entre otros. Es común utilizarlo dentro del elemento &lt;main> para proporcionar información adicional relacionada con el contenido principal de la página.
+                    <br><br>
+                    En resumen, el elemento &lt;aside> es un elemento semántico en HTML que se utiliza para representar contenido relacionado pero secundario al contenido principal de una página web. Este elemento se puede utilizar para una amplia variedad de contenidos relacionados y se utiliza dentro de cualquier elemento de sección de HTML. Es importante tener en cuenta que el elemento <aside> no debe utilizarse para el contenido principal de una página web y debe utilizarse para contenido secundario relacionado que no sea esencial para la comprensión del contenido principal.                        
+                </p>
+            </span>
+        </section>
+        <section>
+            <h2>
+                Etiqueta &lt;footer>.
+            </h2>
+            <span>
+                <p>
+                    El elemento &lt;footer> en HTML se utiliza para representar la sección de pie de página de un documento o sección. Es un elemento semántico que indica el final de una sección o de un documento y contiene información que generalmente se considera menos importante que el contenido principal.
+                    <br><br>
+                    El elemento &lt;footer> se utiliza para proporcionar información adicional sobre la página web, como los datos de contacto, la información de derechos de autor, los enlaces a la política de privacidad, los términos y condiciones, entre otros. También puede contener enlaces a las redes sociales, el mapa del sitio y otros elementos de navegación que no se consideran parte del contenido principal de la página.
+                    <br><br>
+                    Es importante tener en cuenta que el elemento &lt;footer> no debe confundirse con el elemento &lt;bottom> o la etiqueta de cierre &lt;/html>. El elemento &lt;footer> se utiliza para representar la sección de pie de página, mientras que el elemento &lt;bottom> se utiliza para representar el final del contenido de la página y puede contener cualquier contenido adicional necesario, como los scripts de JavaScript y las hojas de estilo.
+                    <br><br>
+                    El elemento &lt;footer> se puede utilizar dentro de cualquier elemento de sección de HTML, como &lt;body>, &lt;article>, &lt;section>, &lt;aside>, &lt;nav>, entre otros. En general, se recomienda colocar el elemento <footer> al final de la sección o del documento para que los usuarios puedan acceder fácilmente a la información adicional después de leer el contenido principal.
+                    <br><br>
+                    En resumen, el elemento &lt;footer> es un elemento semántico en HTML que se utiliza para representar la sección de pie de página de un documento o sección. Este elemento se utiliza para proporcionar información adicional sobre la página web y se recomienda colocarlo al final de la sección o del documento.                        
+                </p>
+            </span>
+        </section>
+      </body>
+</html>
