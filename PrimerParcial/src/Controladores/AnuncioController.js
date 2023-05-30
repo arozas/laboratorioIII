@@ -1,6 +1,12 @@
 class AnuncioController {
+  /**
+   * Controlador de Anuncios.
+   * Se encarga de gestionar la interfaz de usuario y las interacciones con el usuario.
+   */
   constructor() {
+    // Instancia del servicio de anuncios
     this.anuncioService = new AnuncioService();
+     // Elementos del DOM
     this.tableContainer = document.getElementById("table-container");
     this.anunciosTable = document.createElement("table");
     this.anunciosTable.id = "anuncios-table";
@@ -37,8 +43,12 @@ class AnuncioController {
     this.dormitoriosInput = document.getElementById("dormitorios");
     this.guardarBtn = document.getElementById("guardar-btn");
     this.cancelarBtn = document.getElementById("cancelar-btn");
+    // Variables de estado
     this.currentAnuncioIndex = null;
 
+    /**
+     * Inicializa el controlador de anuncios.
+     */
     this.initialize = () => {
       // ...
       this.eliminarBtn.disabled = true;
@@ -59,6 +69,9 @@ class AnuncioController {
       );
     };
 
+    /**
+     * Carga los anuncios en la tabla.
+     */
     this.loadAnuncios = () => {
       const anuncios = this.anuncioService.getAnuncios();
       const tbody = this.anunciosTable.querySelector("tbody");
@@ -92,6 +105,9 @@ class AnuncioController {
       }
     };
 
+    /**
+     * Limpia el formulario de creación/modificación de anuncios.
+     */
     this.clearForm = () => {
       this.tituloInput.value = "";
       this.transaccionVentaInput.checked = false;
@@ -103,6 +119,10 @@ class AnuncioController {
       this.dormitoriosInput.value = "";
     };
 
+    /**
+     * Maneja el evento de clic en una fila de la tabla de anuncios.
+     * @param {number} index - Índice de la fila seleccionada.
+     */
     this.onRowClick = (index) => {
       const anuncios = this.anuncioService.getAnuncios();
       const anuncio = anuncios[index];
@@ -134,6 +154,10 @@ class AnuncioController {
       this.guardarBtn.disabled = false;
     };
 
+    /**
+     * Maneja el evento de cambio en los campos del formulario.
+     * Valida los campos y habilita o deshabilita el botón "Guardar" según la validación de los campos.
+     */
     this.onInputChange = () => {
       // Obtener el valor de cada campo
       const titulo = this.tituloInput.value.trim();
@@ -163,6 +187,10 @@ class AnuncioController {
       this.guardarBtn.disabled = !camposCompletos;
     };
 
+    /**
+     * Valida los campos requeridos en el formulario.
+     * @returns {boolean} Indica si los campos requeridos están completos.
+     */
     this.validarCamposRequeridos = () => {
       const camposRequeridos = [
         this.tituloInput,
@@ -182,6 +210,9 @@ class AnuncioController {
       return true;
     };
 
+    /**
+     * Maneja el evento de clic en el botón "Guardar".
+     */
     this.onGuardarBtnClick = () => {
       const camposCompletos = this.validarCamposRequeridos();
 
@@ -242,37 +273,43 @@ class AnuncioController {
       }
     };
 
+    /**
+     * Maneja el evento de clic en el botón "Cancelar".
+     */
     this.onCancelarBtnClick = () => {
-        this.clearForm();
-        this.cancelarBtn.disabled = true;
-        this.guardarBtn.innerText = "Guardar";
-        this.currentAnuncioIndex = null;
-        this.eliminarBtn.disabled = true;
-  
-        // Deshabilitar el botón después de cancelar
-        this.guardarBtn.disabled = true;
-  
-        // Eliminar la clase 'selected-row' de todas las filas
-        const rows = this.anunciosTable.querySelectorAll("tbody tr");
-        rows.forEach((row) => row.classList.remove("selected-row"));
-      };
+      this.clearForm();
+      this.cancelarBtn.disabled = true;
+      this.guardarBtn.innerText = "Guardar";
+      this.currentAnuncioIndex = null;
+      this.eliminarBtn.disabled = true;
 
-      this.onEliminarBtnClick = () => {
-        if (this.currentAnuncioIndex !== null) {
-          const confirmacion = confirm(
-            "¿Estás seguro de que deseas eliminar este anuncio?"
-          );
-  
-          if (confirmacion) {
-            this.anuncioService.eliminarAnuncio(this.currentAnuncioIndex);
-            this.loadAnuncios();
-            this.clearForm();
-            this.cancelarBtn.disabled = true;
-            this.guardarBtn.innerText = "Guardar";
-            this.currentAnuncioIndex = null;
-            this.eliminarBtn.disabled = true;
-          }
+      // Deshabilitar el botón después de cancelar
+      this.guardarBtn.disabled = true;
+
+      // Eliminar la clase 'selected-row' de todas las filas
+      const rows = this.anunciosTable.querySelectorAll("tbody tr");
+      rows.forEach((row) => row.classList.remove("selected-row"));
+    };
+
+    /**
+     * Maneja el evento de clic en el botón "Eliminar".
+     */
+    this.onEliminarBtnClick = () => {
+      if (this.currentAnuncioIndex !== null) {
+        const confirmacion = confirm(
+          "¿Estás seguro de que deseas eliminar este anuncio?"
+        );
+
+        if (confirmacion) {
+          this.anuncioService.eliminarAnuncio(this.currentAnuncioIndex);
+          this.loadAnuncios();
+          this.clearForm();
+          this.cancelarBtn.disabled = true;
+          this.guardarBtn.innerText = "Guardar";
+          this.currentAnuncioIndex = null;
+          this.eliminarBtn.disabled = true;
         }
-      };
+      }
+    };
   }
 }
