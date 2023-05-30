@@ -1,158 +1,125 @@
-/* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    color: #333;
-    margin: 0;
-    padding: 0;
-  }
-  .containerHeader {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 15px;
-    background-color: #fff;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    margin-bottom: 15px;
-  }
-  
-  .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  h1 {
-    font-size: 24px;
-    text-align: center;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-  }
-  
-  h2 {
-    font-size: 20px;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-  }
-  
-  form {
-    margin-bottom: 20px;
-  }
-  
-  fieldset {
-    border: none;
-    padding: 15px;
-    margin: 0;
-    text-transform: uppercase;
-  }
-  
-  .form-group {
-    margin-bottom: 15px;
-  }
-  
-  label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-    text-transform: uppercase;
-  }
-  
-  input[type="text"],
-  input[type="number"],
-  textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 15px;
-  }
-  
-  .radio-group {
-    display: flex;
-    align-items: center;
-  }
-  
-  .radio-group label {
-    margin-right: 10px;
-  }
-  
-  button {
-    padding: 10px 20px;
-    background-color: #337ab7;
-    color: #fff;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  button:hover {
-    background-color: #23527c;
-  }
-  
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
-  }
-  
-  th,
-  td {
-    padding: 10px;
-    border: 1px solid #ccc;
-  }
-  
-  th {
-    background-color: #f0f0f0;
-    font-weight: bold;
-  }
-  
-  td:last-child {
-    text-align: center;
-  }
-  
-  /* Estilos adicionales de aspecto corporativo */
-  body {
-    background-color: #f9f9f9;
-    color: #333;
-  }
-  
-  .container {
-    background-color: #fff;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-  }
-  
-  h1 {
-    color: #337ab7;
-  }
-  
-  form {
-    background-color: #f5f5f5;
-    padding: 20px;
-    border-radius: 5px;
-  }
-  
-  button {
-    background-color: #337ab7;
-    color: #fff;
-  }
-  
-  button:hover {
-    background-color: #23527c;
-  }
-  
-  table {
-    background-color: #fff;
-  }
-  
-  th {
-    background-color: #337ab7;
-    color: #fff;
-  }
-  
-  td:last-child {
-    text-align: center;
-  }
-  
-  
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 20px;
+}
+
+fieldset {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  box-sizing: border-box;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  resize: none;
+  box-sizing: border-box;
+}
+
+.radio-buttons label {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#eliminar-btn{
+  background-color: #ff0000;
+}
+
+
+button:disabled,
+#eliminar-btn:disabled  {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th,
+table td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+table th {
+  background-color: #007bff;
+  color: #fff;
+}
+
+table tr:hover,
+tr.selected-row {
+  background-color: #3c99fd70;
+}
+
+#anuncios-table td:nth-child(3) {
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.alert {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+
