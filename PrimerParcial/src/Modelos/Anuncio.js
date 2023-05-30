@@ -7,7 +7,8 @@ class Anuncio {
       this.validarBanios(banios);
       this.validarAutos(autos);
       this.validarDormitorios(dormitorios);
-  
+      
+      this.id = null;
       this.titulo = titulo;
       this.transaccion = transaccion;
       this.descripcion = descripcion;

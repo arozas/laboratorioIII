@@ -11,23 +11,22 @@ class AnuncioService {
   
     guardarAnuncio(anuncio) {
       const anuncios = this.getAnuncios();
+      anuncio.id = Date.now().toString();
       anuncios.push(anuncio);
       localStorage.setItem('anuncios', JSON.stringify(anuncios));
     }
   
-    actualizarAnuncio(id, anuncio) {
+    actualizarAnuncio(index, anuncio) {
       const anuncios = this.getAnuncios();
-      const index = anuncios.findIndex((a) => a.id === id);
-      if (index !== -1) {
+      if (index >= 0 && index < anuncios.length) {
         anuncios[index] = anuncio;
         localStorage.setItem('anuncios', JSON.stringify(anuncios));
       }
     }
   
-    eliminarAnuncio(id) {
+    eliminarAnuncio(index) {
       const anuncios = this.getAnuncios();
-      const index = anuncios.findIndex((a) => a.id === id);
-      if (index !== -1) {
+      if (index >= 0 && index < anuncios.length) {
         anuncios.splice(index, 1);
         localStorage.setItem('anuncios', JSON.stringify(anuncios));
       }

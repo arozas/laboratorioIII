@@ -190,7 +190,7 @@ class AnuncioController {
         return;
       }
       const confirmacion = confirm(
-        "¿Estás seguro de que deseas eliminar este anuncio?"
+        "¿Estás seguro de que agregar este anuncio?"
       );
 
       if (confirmacion) {
@@ -257,22 +257,22 @@ class AnuncioController {
         rows.forEach((row) => row.classList.remove("selected-row"));
       };
 
-    this.onEliminarBtnClick = () => {
-      if (this.currentAnuncioId !== null) {
-        const confirmacion = confirm(
-          "¿Estás seguro de que deseas eliminar este anuncio?"
-        );
-
-        if (confirmacion) {
-          this.anuncioService.eliminarAnuncio(this.currentAnuncioId);
-          this.loadAnuncios();
-          this.clearForm();
-          this.cancelarBtn.disabled = true;
-          this.guardarBtn.innerText = "Guardar";
-          this.currentAnuncioId = null;
-          this.eliminarBtn.disabled = true;
+      this.onEliminarBtnClick = () => {
+        if (this.currentAnuncioIndex !== null) {
+          const confirmacion = confirm(
+            "¿Estás seguro de que deseas eliminar este anuncio?"
+          );
+  
+          if (confirmacion) {
+            this.anuncioService.eliminarAnuncio(this.currentAnuncioIndex);
+            this.loadAnuncios();
+            this.clearForm();
+            this.cancelarBtn.disabled = true;
+            this.guardarBtn.innerText = "Guardar";
+            this.currentAnuncioIndex = null;
+            this.eliminarBtn.disabled = true;
+          }
         }
-      }
-    };
+      };
   }
 }
