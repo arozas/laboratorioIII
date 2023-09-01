@@ -55,7 +55,7 @@ textarea {
 
 button {
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: #21b334;
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -67,9 +67,13 @@ button {
   background-color: #ff0000;
 }
 
+#cancelar-btn{
+  background-color: #007bff;;
+}
 
 button:disabled,
-#eliminar-btn:disabled  {
+#eliminar-btn:disabled,
+#cancelar-btn:disabled {
   background-color: #ccc;
   cursor: not-allowed;
 }
